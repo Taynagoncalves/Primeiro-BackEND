@@ -1,0 +1,178 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Corpo da página */
+body {
+  background-image: url(https://cdn.bemcolar.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/p/a/papel-de-parede-triangulos-3d-tons-de-rosa.jpg);
+  
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Cabeçalho */
+header {
+  text-align: center;
+  background: linear-gradient(135deg, #ffb3b3, #ffd6d6);
+  padding: 60px 20px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: #b22222;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  animation: fadeInDown 1s ease;
+}
+
+header p {
+  font-size: 1.3rem;
+  color: #5c2c2c;
+  animation: fadeInUp 1s ease;
+}
+
+/* Animações suaves */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* Main */
+main {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Seção sobre */
+.sobre {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.sobre img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.sobre img:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.sobre div h2 {
+  font-size: 2.4rem;
+  color: #b22222;
+  margin-bottom: 15px;
+}
+
+.sobre div p {
+  font-size: 1.15rem;
+  color: #444;
+}
+
+/* Seção curiosidades */
+.curiosidades {
+  text-align: center;
+  background: #fff;
+  padding: 50px 30px;
+  border-radius: 25px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.curiosidades:hover {
+  transform: translateY(-5px);
+}
+
+.curiosidades h2 {
+  font-size: 2.4rem;
+  color: #b22222;
+  margin-bottom: 30px;
+}
+
+/* Botão estilo moderno */
+.btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #b22222, #ff6666);
+  border: none;
+  padding: 16px 32px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.15rem;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #8c1a1a, #e63e3e);
+  transform: scale(1.07);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Texto curiosidade */
+#curiosidadeTexto {
+  margin-top: 30px;
+  font-size: 1.1rem;
+  color: #5c2c2c;
+  line-height: 1.8;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(135deg, #ffd6d6, #ffb3b3);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  margin-top: 80px;
+  font-size: 1rem;
+  color: #5c2c2c;
+  box-shadow: 0 -6px 15px rgba(0,0,0,0.08);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .sobre {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 2.4rem;
+  }
+
+  .sobre div h2 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
