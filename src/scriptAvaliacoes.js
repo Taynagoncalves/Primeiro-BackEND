@@ -21,3 +21,23 @@ async function adicionarAvaliacao() {
     });
     listarAvaliacao();
 }
+
+
+async function atualizarAvaliacao() {  
+    const id = document.getElementById("id-update").value; 
+    const desc = document.getElementById("desc-update").value;  
+    await fetch(`http://localhost:8081/avaliacao/${id}`, {  
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },  
+        body: JSON.stringify({ desc })  
+    }); 
+    listarAvaliacao();
+}
+
+async function deletarAvaliacao() {
+    const id = document.getElementById("id-delete").value;
+    await fetch(`http://localhost:8081/avaliacao/${id}`, {
+        method: "DELETE"
+    });
+    listarAvaliacao();
+}

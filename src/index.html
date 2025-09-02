@@ -29,13 +29,22 @@
       <p id="curiosidadeTexto">Gatos persas precisam de cuidados especiais com a higiene da pelagem para evitar nós e pelagem embaraçada.</p>
 
     </section>
-    <h2> Lista de Avaliações </h2>
+    <h2> Lista de Avaliações</h2>
     <button onclick="listarAvaliacao()">Listar Avaliações</button>
     <ul id="lista-avaliacao"></ul>
     
-    <h2> Adicionar Avaliação </h2>
+    <h2>Adicionar Avaliação</h2>
     <input id="avaliacao" placeholder="Insira sua Avaliação">
     <button onclick="adicionarAvaliacao()">Adicionar</button>
+
+    <h2>Atualizar Avaliação</h2>
+    <input id="id-update" placeholder="ID">  
+    <input id="desc-update" placeholder="Nova Avaliação"> 
+    <button onclick="atualizarAvaliacao()">Atualizar</button> 
+
+    <h2>Remover Avaliação</h2>
+    <input id="id-delete" placeholder="ID">
+    <button onclick="deletarAvaliacao()">Remover</button>
   </main>
 
   <footer>

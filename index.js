@@ -29,6 +29,20 @@ app.post('/avaliacao', (req,res)=>{
     res.status(201).json(novo);
 });
 
+app.put('/avaliacao/:id', (req, res) => {   
+    const id = parseInt(req.params.id); 
+    const avaliacao = avaliacoes.find(av => av.id === id);  
+    if (!avaliacao) return res.status(404).json({ erro: "Erro"});
+    avaliacao.desc = req.body.desc; 
+    res.json(avaliacao);    
+});
+
+app.delete('/avaliacao/:id', (req, res) => {
+    const id = parseInt(req.params.id);
+    avaliacoes = avaliacoes.filter(av => av.id !== id);
+    res.json({ message: `Avaliação ${id} removida`});
+}); 
+
 app.listen(8081, () => {
     console.log('Servidor iniciado na porta 8081: http://localhost:8081');
 });
